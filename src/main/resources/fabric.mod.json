@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "crosshairtarget",
+  "version": "${version}",
+  "name": "CrosshairTarget",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/Little Bunny/CrosshairTarget"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/crosshairtarget/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "io.github.itzispyder.crosshairtarget.client.CrosshairTargetClient"
+    ],
+    "main": [
+      "io.github.itzispyder.crosshairtarget.CrosshairTarget"
+    ]
+  },
+  "mixins": [
+    "crosshairtarget.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
