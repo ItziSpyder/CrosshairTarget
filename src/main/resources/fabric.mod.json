@@ -3,7 +3,7 @@
   "id": "crosshairtarget",
   "version": "${version}",
   "name": "CrosshairTarget",
-  "description": "",
+  "description": "Changes your crosshair in-game depending on context.",
   "authors": [],
   "contact": {
     "repo": "https://github.com/Little Bunny/CrosshairTarget"
