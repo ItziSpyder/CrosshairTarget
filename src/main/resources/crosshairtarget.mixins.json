@@ -4,8 +4,10 @@
   "package": "io.github.itzispyder.crosshairtarget.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "MixinPlayerEntity"
   ],
   "client": [
+    "LivingEntityRenderer",
     "MixinInGameHud"
   ],
   "injectors": {

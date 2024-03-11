@@ -1,5 +1,6 @@
 package io.github.itzispyder.crosshairtarget.mixin;
 
+import io.github.itzispyder.crosshairtarget.util.TargetUtils;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
@@ -155,5 +156,7 @@ public abstract class MixinInGameHud {
                 lastTarget.set("miss");
             }
         }
+
+        TargetUtils.checkExpiration();
     }
 }
