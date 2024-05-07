@@ -10,6 +10,8 @@ Change your crosshair depending on the context of the situation.
 | target entity  | displays entity reach + attack progress |
 | break block    | displays block break progress           |
 
+### **THIS MOD REQUIRES RENDER LIBRARY [ImproperUI](https://github.com/itzispyder/improperui) TO RUN**
+
 ### Target Entity
 - blue line is your distance to target
 - white line is your max reach distance

@@ -14,7 +14,7 @@ public class CrosshairTarget implements ModInitializer, Global {
     public static final KeyBinding BIND = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "binds.crosshairtarget.menu",
             InputUtil.Type.KEYSYM,
-            GLFW.GLFW_KEY_MINUS,
+            GLFW.GLFW_KEY_EQUAL,
             "binds.crosshairtarget"
     ));
 
