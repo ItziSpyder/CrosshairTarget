@@ -11,6 +11,7 @@ Change your crosshair depending on the context of the situation.
 | break block    | displays block break progress           |
 
 ### **THIS MOD REQUIRES RENDER LIBRARY [ImproperUI](https://github.com/itzispyder/improperui) TO RUN**
+**Keybind to menu is `+` cuz that looks like a crosshair lol.**
 
 ### Target Entity
 - blue line is your distance to target
