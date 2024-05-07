@@ -1,5 +1,6 @@
 package io.github.itzispyder.crosshairtarget.util;
 
+import io.github.itzispyder.crosshairtarget.gui.Config;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.network.ClientPlayerEntity;
@@ -55,23 +56,29 @@ public class CrosshairRenderer {
             context.getMatrices().pop();
         }
 
-        if (aiming) {
+        float scale = (float)Config.readDouble("hud-scale");
+        context.getMatrices().push();
+        context.getMatrices().scale(scale, scale, scale);
+        x = (int)(x / scale);
+        y = (int)(y / scale);
+
+        if (Config.readBool("aiming") && aiming) {
             active.set(true);
             mode.set("bow");
         }
-        else if (using) {
+        else if (Config.readBool("using") && using) {
             active.set(true);
             mode.set("use");
         }
-        else if (attacking) {
+        else if (Config.readBool("attacking") && attacking) {
             active.set(true);
             mode.set("attack");
         }
-        else if (targeting) {
+        else if (Config.readBool("targeting") && targeting) {
             active.set(true);
             mode.set("entity");
         }
-        else if (breaking) {
+        else if (Config.readBool("breaking") && breaking) {
             active.set(true);
             mode.set("block");
         }
@@ -84,6 +91,8 @@ public class CrosshairRenderer {
         renderBlock(context, x, y, mc.interactionManager.getBlockBreakingProgress());
         renderUse(context, x, y, mc.player);
         renderBow(context, x, y, mc.player);
+
+        context.getMatrices().pop();
     }
     
     private static boolean using(Item item) {

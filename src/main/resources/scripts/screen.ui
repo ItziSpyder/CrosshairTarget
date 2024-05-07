@@ -1,0 +1,94 @@
+
+div #background {
+    size: 100%
+    background-color: black
+    opacity: 0.25
+}
+
+div #main {
+    size: 150 200
+    background-color: black
+    opacity: 0.5
+    border-radius: 5
+    shadow-distance: 5
+
+    center: both
+
+    div #title {
+        size: 100% 10
+        inner-text: "Crosshair Target"
+        text-scale: 1.2
+        text-shadow: true
+        text-color: purple
+        text-align: center
+        background-color: #00000000
+        margin-top: 7
+    }
+
+    div #config {
+        size: 80% 90%
+        margin-top: 10%
+        child-align: grid
+        grid-columns: 2
+        opacity: 0
+        margin: 10%
+        margin-top: 12%
+
+        checkbox -crosshairtarget:config.properties:aiming { margin: 3; }
+        div { inner-text: "Aiming"; height: 10; margin: 3; }
+
+        checkbox -crosshairtarget:config.properties:using { margin: 3; }
+        div { inner-text: "Using"; height: 10; margin: 3; }
+
+        checkbox -crosshairtarget:config.properties:attacking { margin: 3; }
+        div { inner-text: "Attacking"; height: 10; margin: 3; }
+
+        checkbox -crosshairtarget:config.properties:targeting { margin: 3; }
+        div { inner-text: "Targeting"; height: 10; margin: 3; }
+
+        checkbox -crosshairtarget:config.properties:breaking { margin: 3; }
+        div { inner-text: "Breaking"; height: 10; margin: 3; }
+
+
+        div {}
+        div { inner-text: "Scale"; height: 10; margin-top: 10; }
+        slider -crosshairtarget:config.properties:hud-scale {
+            min: 0.5
+            max: 1.0
+            val: 1.0
+            width: 75%
+        }
+
+        div {}
+        div {
+            inner-text: "Like this UI?"
+            height: 10
+            margin-top: 20
+            text-scale: 0.7
+        }
+        div {}
+        div {
+            inner-text: "Check out my new rendering library!"
+            height: 10
+            margin-top: 30
+            text-scale: 0.7
+        }
+        div {}
+        button #improperui-ad {
+            inner-text: "ImproperUI"
+            margin-top: 50
+            center: horizontal
+            text-color: white
+            background-color: purple
+            on-click: handleMouseCallbacks
+
+            hover => {
+                padding: 3
+                shadow-distance: 3
+                shadow-color: purple
+                border-thickness: 0
+            }
+        }
+    }
+}
+
