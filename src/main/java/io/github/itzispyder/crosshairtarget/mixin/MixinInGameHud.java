@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class MixinInGameHud {
 
     @Inject(method = "renderCrosshair", at = @At("HEAD"), cancellable = true)
-    public void renderCrosshair(DrawContext context, CallbackInfo ci) {
+    public void renderCrosshair(DrawContext context, float tickDelta, CallbackInfo ci) {
         ci.cancel();
         CrosshairRenderer.render(context);
     }

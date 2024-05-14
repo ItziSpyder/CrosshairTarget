@@ -87,7 +87,7 @@ public class CrosshairRenderer {
         }
 
         renderAttack(context, x, y, attackProgress);
-        renderEntity(context, x, y, hit, mc.player, mc.interactionManager.getReachDistance());
+        renderEntity(context, x, y, hit, mc.player, mc.player.getEntityInteractionRange());
         renderBlock(context, x, y, mc.interactionManager.getBlockBreakingProgress());
         renderUse(context, x, y, mc.player);
         renderBow(context, x, y, mc.player);
