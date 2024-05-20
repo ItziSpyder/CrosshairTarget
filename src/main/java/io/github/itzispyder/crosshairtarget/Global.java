@@ -4,6 +4,6 @@ public interface Global {
 
     String modId = "crosshairtarget";
     String[] screens = {
-            "scripts/screen.ui"
+            "assets/crosshairtarget/improperui/screen.ui"
     };
 }
